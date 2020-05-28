@@ -215,37 +215,42 @@ header + p {
 
 .filter-tab {
     align-items: center;
-    background-color: #ddd; 
-    border-radius: 3px;
+    border-top: 3px solid #555;
+    border-bottom: 3px solid #555; 
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
     margin: 70px auto 20px auto;
-    width: 95%;
+    width: 93%;
 }
 
-.filter-tab > h2 {
+.filter-tab > h2 {  
     align-items: flex-end; 
-    color: #333;
-    display: flex;  
-    height: 100%;
-    padding: 20px 20px;
+    color: #555; 
+    display: flex;
+    height: 100px; 
+    padding: 10px;
 }
 
-.filter-tab > div  {  
+.filter-tab > div  {   
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
     margin: 0 10px;
-    padding: 20px; 
+    width: 300px;
 }
 
 .filter-tab > div >   span { 
     color:  #333;
     font-size: 15px;
     font-weight: bold;  
+    margin: 10px 0;
 }
 
 .filter-tab > div > input {
-    border: 2px solid #888;
+    border: 2px solid #333;
     border-radius: 3px;
     font-size: 20px;
     outline: 0;
@@ -309,7 +314,7 @@ div.avathar + span {
     font-size: 15px;
     font-weight: bold;
     outline: 0;
-    padding: 5px 10px;
+    padding: 10px;
     transition: all 0.3s;
 }
 
@@ -335,7 +340,7 @@ div.avathar + span {
   and (-webkit-min-device-pixel-ratio: 1) {
 
     .header-part {
-        height: 600px;
+        height: 470px;
     }
  
     .input-field { 
@@ -365,15 +370,21 @@ div.avathar + span {
       }
       
       .filter-tab {
+          border: 0;
           justify-content: center;
       }
-
-      .filter-tab > div {
+      
+      .filter-tab > div { 
           display: flex;
           flex-flow: column;
           justify-content: center;
           width: 100%;
       }
+
+      .filter-tab  > h2 {
+          display: none;
+      }
+
 
       .games-templates > div {
           margin: 10px;
