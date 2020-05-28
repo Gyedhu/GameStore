@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header-part {
+    background: linear-gradient(to bottom right, rgb(56, 163, 235), rgb(128, 91, 230));             
+    height: 500px;
+    padding-top: 20px;
+}
+
+.nav { 
+    display: flex;  
+    height: 60px;
+    justify-content: space-between;
+    margin: auto; 
+    width: 90%;
+}
+
+.logo {
+    align-items: center;   
+    background-color: rgba(213, 103, 241, 0.541);
+    border: 2px solid #fff;
+    border-radius: 50%;  
+    color: #fff;    
+    display: flex; 
+    font-family: 'Lilita One'; 
+    justify-content: center;
+    margin-left: 50px;   
+    text-shadow: 0 0 3px #0008;
+    width: 60px;
+}
+
+#logo {
+    display: none;
+    height: 60px;
+    transform: scale(2);
+    width: 60px;
+    margin: 50px auto;
+}
+
+.logo > span {  
+    font-size: 2.5em
+}
+
+.logo > div > i {   
+    text-align: center;
+    width: 60%;
+}
+
+.logo > div > span {
+    font-family: 'Righteous';
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.nav > .buttons { 
+    align-items: center;     
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between; 
+    width: 400px;
+}
+
+.nav > .buttons > div {   
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    flex-direction: column; 
+    min-width: 100px;
+    padding: 10px ; 
+}
+
+.nav > .buttons > div:hover {
+    background-color: #fff3;
+}
+
+
+.nav > .buttons .icon {
+    align-items: center;  
+    display: flex;
+    font-size: 20px;
+    height: 30px; 
+    justify-content: center; 
+    min-width: 30px;
+}
+
+.icon-text {
+    font-size: 0.8em;  
+}
+
+#burger {
+    align-items: center;  
+    color: white;
+    display: none;
+    font-size: 2em;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+}
+
+
+header { 
+    color: white;
+    font-size: 30px;
+    margin: 70px auto 30px auto;
+    text-align: center;
+    width: 50%;
+}
+
+header + p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.input-field {
+    background-color: #fff5; 
+    border-radius: 30px;
+    display: flex;
+    height: 50px;
+    margin: 50px auto; 
+    overflow: hidden;
+    padding: 3px;
+    transition: all 0.3s;
+    width: 50%;
+}
+
+.input-field:hover {
+    box-shadow: 0 0 5px #0007;
+}
+
+.input-field > * {
+    border: 0; 
+    outline: 0; 
+}
+
+.input-field > input {
+    background-color: #fff0;   
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+.input-field > input::placeholder {
+    color: white;
+    font-size: 20px;
+    opacity: 0.7;
+} 
+
+.input-field > button { 
+    background-color: white;
+    border-radius: 50%; 
+    cursor: pointer;
+    color: #333555;
+    font-size: 1.3em;
+    width: 50px; 
+    transition: all 0.3s;
+}
+
+
+.input-field > button:hover {
+    box-shadow: 0 0 5px white;
+}
+
+.input-field > button:active {
+    background-color: #555; 
+}
+
+
+.category-tab {
+    align-items: center;
+    background-color: #333;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+    justify-items: center;
+    margin: -40px auto;
+    padding: 20px;
+    transition: all 0.3s;
+    width: 90%; 
+}
+
+.category-tab > span {
+    border-radius: 60px;
+    color: white;
+    font-weight: bold; 
+    margin: 10px 0;
+    padding: 10px 30px;
+    transition: background-color 0.5s;
+}
+
+.category-tab > span:hover {
+    background-color: white;
+    color: #333;
+}
+
+.filter-tab {
+    align-items: center;
+    background-color: #ddd; 
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 70px auto 20px auto;
+    width: 95%;
+}
+
+.filter-tab > h2 {
+    align-items: flex-end; 
+    color: #333;
+    display: flex;  
+    height: 100%;
+    padding: 20px 20px;
+}
+
+.filter-tab > div  {  
+    border-radius: 4px;
+    margin: 0 10px;
+    padding: 20px; 
+}
+
+.filter-tab > div >   span { 
+    color:  #333;
+    font-size: 15px;
+    font-weight: bold;  
+}
+
+.filter-tab > div > input {
+    border: 2px solid #888;
+    border-radius: 3px;
+    font-size: 20px;
+    outline: 0;
+    padding:  5px 10px;
+    width: 100%;
+}
+
+
+.games-templates {  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    height: 500px;  
+    margin: 0 50px 300px 50px;
+}
+
+.games-templates > div {
+    background-color: #aaa5;
+    border: 2px solid #5553;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+.games-templates > div:hover {
+    transform: scale(1.1);
+}
+
+div.avathar {   
+    height: 90px;
+    margin: auto;
+    width: 90px;
+}
+
+div.avathar > img {
+    width: 100%;
+}
+
+div.avathar + span {    
+    color: #222;
+    font-size: 1.2em;
+    font-weight: bold; 
+    text-align: center; 
+}
+
+.games-templates > div > div.buttons { 
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+    padding: 3px;
+}
+
+.games-templates > div > div.buttons > button {
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    outline: 0;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.games-templates > div > div.buttons > button:hover{ 
+    background-color: white;
+}
+
+.games-templates > div > div.buttons > button:first-child {
+    background-color: rgb(60, 167, 202);
+}
+
+.games-templates > div > div.buttons > button:last-child {
+    background-color: rgb(241, 114, 40);
+}
+
+.games-templates > div > div.buttons > button:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+@media only screen 
+  and (max-device-width: 768px)   
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .header-part {
+        height: 600px;
+    }
+
+    #logo {
+        display: flex;
+    }
+
+      #burger {
+        display: flex;
+    }
+
+      .nav {
+          display: none;
+      }
+      
+      .filter-tab {
+          justify-content: center;
+      }
+
+      .filter-tab > div {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          width: 100%;
+      }
+
+      .games-templates > div {
+          margin: 10px;
+      }
+
+}
+
+@media only screen 
+    and (max-device-width: 450px)  
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+        .games-templates {    
+            grid-template-columns: 1fr;
+            margin: 0 auto; 
+            width: 95%;
+        }
+}
